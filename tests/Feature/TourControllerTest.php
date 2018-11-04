@@ -33,6 +33,12 @@ class TourControllerTest extends TestCase
         $response->assertViewHas('tours');
     }
 
-    
+    /**
+     * Test that tours are passed to the index view
+     */
+    public function testReviewsInViews(){
+        $response = $this->call('GET','/');
+        $response->assertViewHas('reviews');
+    }
 
 }
