@@ -52,6 +52,10 @@ class TourControllerTest extends TestCase
         $reviews = $controller->getReviews();
         $this->assertEquals(6,count($reviews));
     }
-    
 
+    public function testForFeaturesReturned(){
+        $controller = new TourController();
+        $features = $controller->getFeatures();
+        $this->assertNotEmpty($features,'Features is empty');
+    }
 }
