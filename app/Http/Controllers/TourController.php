@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class TourController extends Controller
 {
 
-    private function getFeatures()
+    public function getFeatures()
     {
         $features = collect();
         $images_parent_dir = 'tour/images/feature-location/';
@@ -23,7 +23,7 @@ class TourController extends Controller
         return $features;
     }
 
-    private function getReviews()
+    public function getReviews()
     {
         $reviews = collect();
         $images_parent_dir = 'tour/images/reviewer/reviewer-';
