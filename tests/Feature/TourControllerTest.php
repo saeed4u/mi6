@@ -41,4 +41,12 @@ class TourControllerTest extends TestCase
         $response->assertViewHas('reviews');
     }
 
+    public function testForReviewsReturned(){
+        $controller = new TourController();
+        $reviews = $controller->getReviews();
+        $this->assertNotEmpty($reviews,'Reviews is empty');
+    }
+
+   
+
 }
